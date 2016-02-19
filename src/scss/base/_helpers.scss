@@ -1,0 +1,59 @@
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+   Helpers
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* Import if Google font is defined
+---------------------------------------- */
+
+@if variable-exists(font_url_google) {
+	@import url($font_url_google);
+}
+
+
+/* Generic Helpers
+---------------------------------------- */
+
+.page-wrapper {
+	height: 100%;
+}
+
+.full-height {
+	height: 100%;
+	min-height: 80px;
+}
+
+.overlay {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99;
+}
+
+.fade {
+	@include animation(fadeIn 0.5s ease-in 0.35s forwards);
+	opacity: 0;
+
+	.no-cssanimations & {
+		opacity: 1;
+	}
+}
+
+
+/* Screen Reader Text
+---------------------------------------- */
+
+.srt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}

@@ -1,0 +1,74 @@
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+   Base
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+*, *:after, *:before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	background: $light_gray;
+	height: 100%;
+}
+
+body {
+	background: $light_gray;
+	font-family: $font_family_primary;
+	font-size: $base_font_size;
+	font-weight: $font_weight_normal;
+	line-height: $base_line_height;
+	color: $text_colour;
+	height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6	{
+	font-family: $font_family_primary;
+	text-rendering: optimizeLegibility;
+	margin: 0 0 0.25em 0;
+	line-height: $base_line_height;
+	font-weight: $font-weight-bold;
+	color: $text_colour_dark;
+}
+
+h1	{
+	font-size: 3.998em;
+}
+
+h2	{
+	font-size: 2.827em;
+}
+
+h3	{
+	font-size: 1.999em;
+}
+
+h4	{
+	font-size: 1.414em;
+}
+
+h5, h6	{
+	font-size: 1em;
+}
+
+p 	{
+	margin-bottom: 1.3em;
+}
+
+a 	{
+	@include transition(all 0.25s ease);
+	text-decoration: none;
+	color: $link_colour;
+	
+	&:hover, &:focus {
+		cursor: pointer;
+		color: $link_colour_hover;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+}

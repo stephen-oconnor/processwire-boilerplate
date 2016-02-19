@@ -1,0 +1,80 @@
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+   Global Configuration
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* Font Stacks
+---------------------------------------- */
+
+$font_url_google: 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,300,900';
+$font_family_primary: 'Source Sans Pro', sans-serif;
+
+
+/* Font Weights
+---------------------------------------- */
+
+$font_weight_light: 300;
+$font_weight_normal: 400;
+$font_weight_bold: 700;
+$font_weight_ultra_bold: 900;
+
+
+/* Descriptive Base Colours
+---------------------------------------- */
+
+$white: #ffffff;
+$black: #000000;
+$light_gray: #f6f6f6;
+$gray: #434343;
+$mandy: #e55c54;
+
+
+/* Colour Usage
+---------------------------------------- */
+
+$colour_primary: $mandy;
+
+$text_colour: $gray;
+$text_colour_light: $white;
+$text_colour_dark: $black;
+
+$link_colour: $mandy;
+$link_colour_hover: darken($mandy, 8%);
+
+
+/* Colour Palette Modifier
+---------------------------------------- */
+
+$palettes: (
+	black: (
+		xx-light: lighten($black, 96%),
+		x-light: lighten($black, 90%),
+		light: lighten($black, 80%),
+		dark: lighten($black, 20%),
+		base: $black
+	),
+	mandy: (
+		light: lighten($mandy, 5%),
+		base: $mandy,
+		dark: darken($mandy, 5%),
+		x-dark: darken($mandy, 35%)
+	)
+);
+
+
+/* Text
+---------------------------------------- */
+
+$base_font_size: 1em;
+$base_line_height: 1.4;
+
+
+/* Border Radius
+---------------------------------------- */
+
+$border_radius: 4px;
+
+
+/* Asset Path Variables
+---------------------------------------- */
+
+$path_image: '../assets/static-images';

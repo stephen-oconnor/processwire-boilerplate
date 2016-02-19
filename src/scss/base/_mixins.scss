@@ -1,0 +1,55 @@
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+   Mixins
+= = = = = = = = = = = = = = = = = = = = = = = = = = = = = = */
+
+/* Web fonts
+---------------------------------------- */
+
+@mixin font_face($family, $file) {
+	@font-face {
+		font-family: '$family';
+		src: url('#{$path_font}/#{file}-webfont.eot'); /* IE9 Compat Modes */
+		src: url('#{$path_font}/#{file}-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+		     url('#{$path_font}/#{file}-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+		     url('#{$path_font}/#{file}-webfont.woff') format('woff'), /* Pretty Modern Browsers */
+		     url('#{$path_font}/#{file}-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+		     url('#{$path_font}/#{file}-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+	}
+}
+
+
+/* Center horizontally and vertically
+---------------------------------------- */
+@mixin center_center {
+	position: absolute;
+	z-index: 100;
+	left: 50%;
+	top: 50%;
+	width: 90%;
+	text-align: center;
+
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+
+
+/* Add a divider after a content block
+---------------------------------------- */
+@mixin page_rule($mar_top, $mar_bot) {
+	&:after {
+		content: "";
+		width: 110px;
+		height: 3px;
+		background: $colour_primary;
+		margin: $mar_top auto $mar_bot auto;
+		display: block;
+
+		@media (min-width: 64em) {
+			margin-left: 0;
+			margin-right: 0;
+		}
+	}
+}
