@@ -38,6 +38,7 @@ This is a boilerplate for my standard build with ProcessWire. Only for me, but f
 
 - Templates are located and stored in the site > templates folder
 - Copy 'src' folder into site > templates
+- Add assets, assets > fonts and assets > images folders
 - Install node, npm and gulp globally (if not installed already)
 - Run 'npm install' to install project dependencies
 - Add settings to .gitignore to ignore files and folders you don't want to track
