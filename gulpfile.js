@@ -42,7 +42,7 @@ gulp.task('serve', ['watchSass']);
 
 // Clean any previously created dist files.
 gulp.task('clean', function() {
-  del(['dist', '/css/application.css*']);
+  del(['dist', '/css/application.css*', '/js/application.min.js*']);
 });
 
 
